@@ -13,3 +13,4 @@ rules:
   # single export without default is okay, used in many places
   import/prefer-default-export: 0
   jsx-a11y/href-no-hash: 0
+  comma-dangle: 0

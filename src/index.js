@@ -1,8 +1,9 @@
 import React, { Component } from 'react';
-import { AppRegistry, Text, View } from 'react-native';
+import { AppRegistry, View } from 'react-native';
 import { Provider as MobXProvider, observer } from 'mobx-react/native';
 
 import Store from './stores/Store';
+import Navigator from './navigator';
 
 const store = new Store();
 
@@ -12,7 +13,7 @@ class ReactNativeMobXBoilerplate extends Component {
     return (
       <MobXProvider store={store}>
         <View style={{ paddingTop: 20 }}>
-          <Text>Item: {store.item}</Text>
+          <Navigator />
         </View>
       </MobXProvider>
     );
