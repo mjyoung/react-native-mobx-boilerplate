@@ -1,0 +1,15 @@
+parser: "babel-eslint"
+extends: "airbnb"
+plugins: ["jsx-a11y", "import", "react"]
+rules:
+  # this rule allows jsx in js files
+  # https://github.com/yannickcr/eslint-plugin-react/blob/master/docs/rules/jsx-filename-extension.md
+  react/jsx-filename-extension: [1, { "extensions": [".js", ".jsx"] }]
+  # Hot reloading currently does not work with this rule.
+  # https://github.com/facebook/react-native/issues/10991
+  react/prefer-stateless-function: 0
+  # Requiring images inline does not work with this rule
+  global-require: 0
+  # single export without default is okay, used in many places
+  import/prefer-default-export: 0
+  jsx-a11y/href-no-hash: 0
